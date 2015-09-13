@@ -16,7 +16,7 @@
         <p>We talk about JavaScript. Each month in Warsaw, Poland.</p>
     </header>
 
-    <section class="slide front-page">
+    <section class="slide front-page" alt='welcome slide'>
         <div>
             <div class="logo">
                 <!-- Logo WarsawJS -->
@@ -24,102 +24,191 @@
             </div>
             <div class="details">
                 <!-- 1. Avatar -->
-                <img src="pictures/speaker.jpg" alt="Speaker" />
+                <img style='height: 215px; width: 215px' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/005/09b/219/0ad563f.jpg'>
 
                 <!-- 2. Speaker -->
-                <h2>Speaker name</h2>
+                <h2>Piotr Zientara</h2>
 
                 <!-- 3. Presentation title -->
-                <h2><strong>"WarsawJS Presentation: Template"</strong></h2>
+                <h2><strong>Debugging JS</strong></h2>
 
                 <!-- 4. Presentation date -->
-                <h2>XXXX-XX-XX</h2>
+                <h2>2015-09-16</h2>
 
                 <!-- 5. Contact the speaker -->
-                <h2><a href="http://twitter.com/speaker">@speaker</a></h2>
+                <h2><a href="http://twitter.com/Piotr_Zientara">@Piotr_Zientara</a></h2>
             </div>
         </div>
     </section>
 
-    <section class="slide">
+    <section class="slide" alt='why-debug slide'>
         <div>
-            <h2>Plain Text on Your Slides</h2>
+            <h2>Why do we need to debug?</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur <a href="#4">adipisicing</a> elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua. Ut enim ad minim veniam, <em>quis nostrud</em> exercitation ullamco
-                laboris <strong>nisi ut aliquip</strong> ex ea commodo consequat. Duis aute irure <i>dolor</i> in
-                reprehenderit in voluptate velit esse cillum <b>dolore</b> eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in <code>&lt;culpa&gt;</code> qui officia deserunt mollit anim id est laborum.
+            <p>
+             <i> Often, when JavaScript code contains errors, nothing will happen. There are no error messages, and you will get no indications where to search for errors.</i>
             </p>
+            <img src='pictures/normalErrors.png'>
+            <p>source: <a href="#4">W3 Schools</a></p>
         </div>
     </section>
 
-    <section class="slide">
+    <section class="slide" alt='tweets slide'>
         <div>
-            <h2>All Kind of Lists</h2>
-            <ol>
-                <li>Simple lists are marked with bullets</li>
-                <li>Ordered lists begin with a number</li>
-                <li>You can even nest lists one inside another
-                    <ul>
-                        <li>Or mix their types</li>
-                        <li>But do not go too far</li>
-                        <li>Otherwise audience will be bored</li>
-                    </ul>
-                </li>
-                <li>Look, seven rows exactly!</li>
-            </ol>
+            <h2>#debuggingJS</h2>
+
+            <img src='pictures/debuggingJSTweets.png'>
         </div>
     </section>
 
-    <section class="slide">
+    <section class="slide" alt='debugging-methods slide'>
         <div>
-            <h2>JavaScript Samples</h2>
+            <h2>Methods of debugging</h2>
+            <ul>
+                <li>Console logs and alerts</li>
+                <li>Debugger</li>
+                <li>Examining the code</li>
+                <li>Learning more about framework and methods we use</li>
+                <li>Deleting code</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" alt='instant-method slide'>
+        <div>
+            <h2>What caused that bug?</h2>
+            <img style='height:400px' src='pictures/error.png'>
+        </div>
+    </section>
+
+    <section class="slide" alt='logging-method slide'>
+        <div>
+            <h2>Logging methods</h2>
+            <ul>
+                <li>See if the code executes</li>
+                <li>Check the variables</li>
+                <li>Rembember to remove the logs!</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" alt='logging-method-weakness slide'>
+        <div>
+            <h2>Sad developer's console</h2>
+
+            <img src='pictures/wppl.png'>
+        </div>
+    </section>
+
+    <section class="slide" alt='examine-method slide'>
+        <div>
+            <h2>Examining code</h2>
+            <ul>
+                <li>Clean and refactor your code</li>
+                <li>Hunt for typos</li>
+                <li>Change the order of code execution</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" alt='on ready vs on load'>
+        <div>
+            <h2>On load vs on ready</h2>
             <pre>
-                <code><mark class="comment">// Crockford style IIFE</mark></code>
-                <code>(function () {</code>
-                <code>  var <mark>someVar</mark> = 'value';</code>
-                <code>  console.<mark class="important">log</mark>(someVar);</code>
-                <code>}());</code>
+                <code>$( document ).ready(function() {</code>
+                <code><mark class="comment">  // code 1</mark></code>
+                <code>})</code>
+            </pre>
+            <pre>
+                <code>$( window ).load(function() {</code>
+                <code><mark class="comment">  // code 2</mark></code>
+                <code>})</code>
             </pre>
         </div>
     </section>
-    <section class="slide">
+
+    <section class="slide" alt='learn-method slide'>
         <div>
-            <h2>Even Tables</h2>
-            <table>
-                <tr>
-                    <th scope="col">Locavore</th>
-                    <th>Umami</th>
-                    <th>Helvetica</th>
-                    <th>Vegan</th>
-                </tr>
-                <tr>
-                    <th scope="row">Fingerstache</th>
-                    <td>Kale</td>
-                    <td>Chips</td>
-                    <td>Keytar</td>
-                </tr>
-                <tr>
-                    <th scope="row">Sriracha</th>
-                    <td>Gluten-free</td>
-                    <td>Ennui</td>
-                    <td>Keffiyeh</td>
-                </tr>
-                <tr>
-                    <th scope="row">Thundercats</th>
-                    <td>Jean</td>
-                    <td>Shorts</td>
-                    <td>Biodiesel</td>
-                </tr>
-                <tr>
-                    <th scope="row">Terry</th>
-                    <td>Richardson</td>
-                    <td>Swag</td>
-                    <td>Blog</td>
-                </tr>
-            </table>
-            <p>It’s good to have information organized.</p>
+            <h2>Learn about methods and your framework</h2>
+            <ul>
+                <li>The differences can be tricky</li>
+                <li>Maybe some methods just work by accident?</li>
+                <li>Debug yourself ;-)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" alt='error-unexpected-token slide'>
+        <div>
+            <h2>Usuall error</h2>
+            <img style='height: 150px' src='pictures/unexpected_token.png'>
+        </div>
+    </section>
+
+    <section class="slide" alt='error-hard-detection slide'>
+        <div>
+            <h2>Difficult detection?</h2>
+            <img style='height:400px' src='pictures/debug_view_1.png'>
+        </div>
+    </section>
+
+
+    <section class="slide" alt='examine-method-typos slide'>
+        <div>
+            <h2>The double miracle</h2>
+            <!-- explain that before 2 years of being programmer the efect was different -->
+            <!-- hypothesis: programmers read every letter -->
+            <img style='height: 400px' src='pictures/typos.jpg'>
+        </div>
+    </section>
+
+    <section class="slide" alt='off-topic-typos slide'>
+        <div>
+            <h2>Why we make typos?</h2>
+            <ul>
+                <li>Clumsy fingers?</li>
+                <li>Bad habbit?</li>
+                <li>Cultural thing?</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" alt='ninja-programmer slide'>
+        <div>
+            <h2>Do you want to be a ninja programmer?</h2>
+            <p>Fulfil your dreams!</p>
+            <p>Visit <a href="http://geektyper.com/">Geek Typer</a></p>
+        </div>
+    </section>
+
+    <section class="slide" alt='debugger-method slide'>
+        <div>
+            <h2>The debugger tool in modern browsers</h2>
+            <ul>
+                <li>Stops execution of the code</li>
+                <li>Multiple breaks can be set</li>
+                <li>Can be turned on automaticly on any exception</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" alt='deleting-code-method slide'>
+        <div>
+            <h2>Removing code methods</h2>
+            <p><i>when all methods fail, the new plan A!</i></p>
+            <ul>
+                <li>Delete suspecious code</li>
+                <li>Delete the code using bisect</li>
+                <li>Recreate the error in a smaller environment</li>
+                <!-- you might found a bug in the library! -->
+                <li>Delete the code and write it again</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" alt='thanks slide'>
+        <div>
+            <img src='pictures/thanks.jpg' style='height: 500px'>
         </div>
     </section>
 
